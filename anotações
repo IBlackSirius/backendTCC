@@ -1,0 +1,12 @@
+{
+	"blaster_id":"60b8f9bf-4664-4405-8036-0d93c862efd3",
+	"boxes":[{
+		"barcode":"barcodeCaixa",
+		"quantity_products":10,
+		"products":[{
+			"barcode":"barcodeProduto",
+			"type":"Explosivo",
+			"name":"Dinaminte"
+		}]
+	}]
+}

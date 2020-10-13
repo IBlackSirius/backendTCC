@@ -1,0 +1,132 @@
+[
+    {
+        "barcode": "barcodeCaixa",
+        "products": [
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            }
+        ]
+    },
+    {
+        "barcode": "barcodeCaixa",
+        "products": [
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            }
+        ]
+    },
+    {
+        "barcode": "barcodeCaixa",
+        "products": [
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            }
+        ]
+    },
+    {
+        "barcode": "barcodeCaixa",
+        "products": [
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            }
+        ]
+    },
+    {
+        "barcode": "barcodeCaixa",
+        "products": [
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            },
+            {
+                "barcode": "barcodeProduto",
+                "type": "Explosivo",
+                "name": "Dinaminte"
+            }
+        ]
+    }
+]

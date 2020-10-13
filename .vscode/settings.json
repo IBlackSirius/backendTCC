@@ -1,0 +1,6 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "git.ignoreLimitWarning": true,
+    "debug.javascript.warnOnLongPrediction": false
+}
