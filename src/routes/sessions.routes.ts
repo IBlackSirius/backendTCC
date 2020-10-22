@@ -9,14 +9,18 @@ sessionsRouter.post('/', async (request, response) => {
 
   const authenticateUser = new AuthenticateUserService();
 
-  const { user, token } = await authenticateUser.execute({
+  const { user, token, status, message } = await authenticateUser.execute({
     email,
     password,
   });
+  if (message) {
+    return response.json({ message, status });
+  }
+  if (user) {
+    delete user.password;
+  }
 
-  delete user.password;
-
-  return response.json({ user, token, status: 'Ok' });
+  return response.json({ user, token, status });
 });
 
 export default sessionsRouter;

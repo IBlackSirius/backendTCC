@@ -122,5 +122,5 @@ operationsRouter.delete('/:id', async (req, res) => {
 
 // Operação draftfires Routes
 
-/* operationsRouter.get('/Operations_DraftFires', async (req, res) => { }); */
+operationsRouter.get('/Operations_DraftFires', async (req, res) => { });
 export default operationsRouter;
