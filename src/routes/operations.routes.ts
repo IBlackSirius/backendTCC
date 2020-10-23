@@ -120,7 +120,4 @@ operationsRouter.delete('/:id', async (req, res) => {
   return res.json({ message: 'Operação deletada com Sucesso' });
 });
 
-// Operação draftfires Routes
-
-operationsRouter.get('/Operations_DraftFires', async (req, res) => { });
 export default operationsRouter;

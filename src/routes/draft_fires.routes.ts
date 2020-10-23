@@ -21,7 +21,9 @@ draftfireRouter.get('/:id', async (req, res) => {
   const draftfiresRepository = getRepository(Draft_Fires);
   const { id } = req.params;
 
-  const draftfires = await draftfiresRepository.findOne(id);
+  const draftfires = await draftfiresRepository.findOne(id, {
+    relations: ['blaster'],
+  });
 
   if (!draftfires) {
     return res.json(new AppError('O Plano de fogo não existe', 404));

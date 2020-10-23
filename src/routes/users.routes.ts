@@ -7,7 +7,7 @@ import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const usersRouter = Router();
 
-usersRouter.use(ensureAuthenticated);
+// usersRouter.use(ensureAuthenticated);
 
 usersRouter.post('/', async (req, res) => {
   const { name, email, password, address, cep, cpf, type } = req.body;

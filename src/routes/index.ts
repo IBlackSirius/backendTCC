@@ -6,12 +6,14 @@ import sessionsRouter from './sessions.routes';
 import miningcompanyRouter from './mining_companies.routes';
 import miningfieldsRouter from './mining_fields.routes';
 import operationsRouter from './operations.routes';
+import operationsdraftfiresRouter from './operationsdraftfires.routes';
 
 const routes = Router();
 routes.use('/users', usersRouter);
 routes.use('/mining_companies', miningcompanyRouter);
 routes.use('/mining_fields', miningfieldsRouter);
 routes.use('/operations', operationsRouter);
+routes.use('/operations_draftfires', operationsdraftfiresRouter);
 routes.use('/drafts', draftfireRouter);
 routes.use('/storagestocks', storagestockRouter);
 routes.use('/sessions', sessionsRouter);

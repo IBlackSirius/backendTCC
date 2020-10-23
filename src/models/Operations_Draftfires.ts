@@ -11,6 +11,7 @@ import {
 import Operations from './Operations';
 import Draft_Fires from './Draft_Fires';
 import Boxes from './Boxes';
+import User from './User';
 
 @Entity('operations_draftfires')
 class Operations_Draftfires {
@@ -18,10 +19,10 @@ class Operations_Draftfires {
   id: string;
 
   @Column()
-  operations_id: string;
+  operation_id: string;
 
   @OneToOne(() => Operations)
-  @JoinColumn({ name: 'operations_id' })
+  @JoinColumn({ name: 'operation_id' })
   operations: Operations;
 
   @Column()
