@@ -67,16 +67,6 @@ export default class operationsDraftfires1600113397491
         onUpdate: 'CASCADE',
       }),
     ]);
-    await queryRunner.createForeignKeys('operations_draftfires', [
-      new TableForeignKey({
-        name: 'Boxes Id',
-        columnNames: ['boxes_id'],
-        referencedColumnNames: ['id'],
-        referencedTableName: 'storages',
-        onDelete: 'SET NULL',
-        onUpdate: 'CASCADE',
-      }),
-    ]);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {

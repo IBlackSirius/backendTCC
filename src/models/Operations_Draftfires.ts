@@ -10,8 +10,6 @@ import {
 
 import Operations from './Operations';
 import Draft_Fires from './Draft_Fires';
-import Boxes from './Boxes';
-import User from './User';
 
 @Entity('operations_draftfires')
 class Operations_Draftfires {
@@ -34,10 +32,6 @@ class Operations_Draftfires {
 
   @Column()
   boxes_id: string;
-
-  @OneToOne(() => Boxes)
-  @JoinColumn({ name: 'boxes_id' })
-  boxes: Boxes;
 
   @CreateDateColumn()
   created_at: Date;

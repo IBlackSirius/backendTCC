@@ -25,6 +25,7 @@ class CheckisValidService {
     if (!boxValid) {
       throw new AppError(`O Arquivo ${filename} está com problemas`, 400)
         .message;
+      console.log('Yup fail');
     }
 
     const promises = products.map(async element => {
@@ -33,6 +34,7 @@ class CheckisValidService {
       if (!productValid) {
         throw new AppError(`O Arquivo ${filename} está com problemas`, 400)
           .message;
+        console.log('Yup fail Produtoc');
       }
       // eslint-disable-next-line no-param-reassign
       element.status = 'lacrado';
@@ -53,6 +55,7 @@ class CheckisValidService {
 
     if (!boxValid) {
       throw new AppError(`A caixa está com problemas`, 400).message;
+      console.log('Yup fail Produtoc');
     }
 
     const promises = products.map(

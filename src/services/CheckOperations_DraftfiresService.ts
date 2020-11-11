@@ -38,22 +38,6 @@ export default class CheckOperations_DraftfiresService {
       return false;
     } // checa caso exista na tabela propria
 
-    const draftInOperation = await Operations_DraftfiresRepository.findOne({
-      where: { draftfires_id },
-    });
-
-    if (draftInOperation) {
-      return false;
-    } // checa caso ja esteja em outra operação
-
-    const boxInDraft = await Operations_DraftfiresRepository.findOne({
-      where: { boxes_id },
-    });
-
-    if (boxInDraft) {
-      return false;
-    } // checa caso ja esteja em outro Plano de fogo
-
     const operations_draftfires = await Operations_DraftfiresRepository.findOne(
       {
         operation_id,

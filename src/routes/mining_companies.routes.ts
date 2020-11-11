@@ -25,8 +25,10 @@ miningcompanyRouter.post('/', async (req, res) => {
     email,
     cnpj,
   });
-
-  return res.json(miningCompany);
+  if (miningCompany) {
+    return res.json(miningCompany);
+  }
+  return res.json({ message: 'Compania ja cadastrada' });
 });
 
 miningcompanyRouter.get('/:id', async (req, res) => {

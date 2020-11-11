@@ -19,7 +19,6 @@ class CreateStorageService {
     fileName,
     boxes,
   }: Request): Promise<{
-    Register: Register;
     Boxes: Array<{
       barcode: string;
       quantity_products: number;
@@ -29,13 +28,6 @@ class CreateStorageService {
   }> {
     const storageRepository = getRepository(Boxes);
     const registerRepository = getRepository(Register);
-
-    const boxesString = JSON.stringify(boxes);
-
-    const register = registerRepository.create({
-      boxes: boxesString,
-      fileName,
-    });
 
     const arrBox = new Array<Boxes>();
 
@@ -51,12 +43,16 @@ class CreateStorageService {
       return arrBox.push(box);
     });
 
-    await storageRepository.save(arrBox);
-
-    await registerRepository.save(register);
+    await storageRepository.save(arrBox).then(async data => {
+      const boxesString = JSON.stringify(data);
+      const register = registerRepository.create({
+        boxes: boxesString,
+        fileName,
+      });
+      await registerRepository.save(register);
+    });
 
     return {
-      Register: register,
       Boxes: boxes,
     };
   }

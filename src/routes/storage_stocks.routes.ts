@@ -20,6 +20,7 @@ storageRouter.get('/', async (req, res) => {
 
   const boxes = await storageRepository.find({
     select: ['id', 'barcode', 'quantity_products', 'products', 'status'],
+    where: { status: 'lacrado' }, // lacrado, usado  Indraft
   });
 
   return res.json(boxes);
@@ -86,9 +87,14 @@ storageRouter.put('/', async (req, res) => {
   const storageRepository = getRepository(Storage);
 
   const { boxes } = req.body;
+  const arrBoxforDelete: string[] = [];
   const findBoxes = await storageRepository.findByIds(
+    // eslint-disable-next-line consistent-return
     boxes.map((box: Storage) => {
-      return box.id;
+      if (box.products !== '[]') {
+        return box.id;
+      }
+      arrBoxforDelete.push(box.id);
     }),
   );
   findBoxes.map(async box => {
@@ -99,6 +105,9 @@ storageRouter.put('/', async (req, res) => {
       }),
     );
   });
+  if (arrBoxforDelete.length > 0) {
+    await storageRepository.delete([...arrBoxforDelete]);
+  }
 
   return res.json({ message: 'As Caixas foram atualizadas' });
 });

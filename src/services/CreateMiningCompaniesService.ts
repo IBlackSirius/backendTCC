@@ -14,18 +14,21 @@ export default class CreateMiningCompanyService {
     address,
     email,
     cnpj,
-  }: Request): Promise<Mining_Companies> {
+  }: Request): Promise<Mining_Companies | boolean> {
     const miningcompanyRepository = getRepository(Mining_Companies);
 
-    const miningCompany = miningcompanyRepository.create({
-      name,
-      address,
-      email,
-      cnpj,
-    });
+    const check = await miningcompanyRepository.findOne({ where: { email } });
+    if (!check) {
+      const miningCompany = miningcompanyRepository.create({
+        name,
+        address,
+        email,
+        cnpj,
+      });
 
-    await miningcompanyRepository.save(miningCompany);
-
-    return miningCompany;
+      await miningcompanyRepository.save(miningCompany);
+      return miningCompany;
+    }
+    return false;
   }
 }

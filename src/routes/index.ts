@@ -7,9 +7,11 @@ import miningcompanyRouter from './mining_companies.routes';
 import miningfieldsRouter from './mining_fields.routes';
 import operationsRouter from './operations.routes';
 import operationsdraftfiresRouter from './operationsdraftfires.routes';
+import reportsRouter from './reports.routes';
 
 const routes = Router();
 routes.use('/users', usersRouter);
+routes.use('/reports', reportsRouter);
 routes.use('/mining_companies', miningcompanyRouter);
 routes.use('/mining_fields', miningfieldsRouter);
 routes.use('/operations', operationsRouter);
